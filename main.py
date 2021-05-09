@@ -1,6 +1,7 @@
 import sys
 
 from ciphers.alphabet_substitution import AlphabetSubstitution
+from ciphers.mirror_vigenere import MirrorVigenere
 from ciphers.vigenere import Vigenere
 
 
@@ -20,7 +21,7 @@ def main(arguments):
 
 
 def read_file(name):
-    with open('samples\\' + name, 'r') as file:
+    with open('samples\\' + name, 'r', encoding='utf-8') as file:
         output = file.read()
     return output
 
@@ -33,7 +34,8 @@ def generate_cipher(method):
         "as-two": AlphabetSubstitution(
             ['y', 'w', 'd', 'n', 'q', 'm', 'l', 'x', 's', 'j', 'i', 'h', 'g', 'a', 'r', ' ', 'p', ' ', 'o', 'k', 't',
              'c', 'f', 'e', 'u', 'z']),
-        "vg-three": Vigenere("clez")
+        "vg-three": Vigenere("clez"),
+        "vg-four": MirrorVigenere("bravez", [1, 0, 0, 2, 4, 5, 0, 3, 4, 5, 0, 4, 5, 0, 4, 5, 1, 5, 0])
     }
 
     return switcher.get(method, None)

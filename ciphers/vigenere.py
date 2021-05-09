@@ -9,12 +9,13 @@ class Vigenere(Cipher):
     def __init__(self, key):
         self.key = key
 
-    def decrypt(self, buffer) -> str:
+    def decrypt(self, buffer: str) -> str:
         result = ""
         position = 0
 
         for character in buffer:
-            if not character.isalpha():
+            print(character)
+            if character not in string.ascii_lowercase:
                 result += character
             else:
                 index = string.ascii_lowercase.index(character)
