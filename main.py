@@ -1,6 +1,7 @@
 import sys
 
 from ciphers.alphabet_substitution import AlphabetSubstitution
+from ciphers.vigenere import Vigenere
 
 
 def main(arguments):
@@ -31,7 +32,8 @@ def generate_cipher(method):
              'w', 'x', 'y', 'z', 'a']),
         "as-two": AlphabetSubstitution(
             ['y', 'w', 'd', 'n', 'q', 'm', 'l', 'x', 's', 'j', 'i', 'h', 'g', 'a', 'r', ' ', 'p', ' ', 'o', 'k', 't',
-             'c', 'f', 'e', 'u', 'z'])
+             'c', 'f', 'e', 'u', 'z']),
+        "vg-three": Vigenere("clez")
     }
 
     return switcher.get(method, None)
