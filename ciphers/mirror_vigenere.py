@@ -10,7 +10,7 @@ class MirrorVigenere(Vigenere):
         self.initial_key = key
         self.shift = shift
 
-    def decrypt(self, buffer: str) -> str:
+    def decrypt(self, buffer) -> str:
         result = ""
         lines = buffer.splitlines()
 

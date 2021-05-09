@@ -9,7 +9,7 @@ class Vigenere(Cipher):
     def __init__(self, key):
         self.key = key
 
-    def decrypt(self, buffer: str) -> str:
+    def decrypt(self, buffer) -> str:
         result = ""
         position = 0
 

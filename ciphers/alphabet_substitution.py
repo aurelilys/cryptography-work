@@ -13,7 +13,7 @@ class AlphabetSubstitution(Cipher):
         result = ""
 
         for character in buffer:
-            if not character.isalpha():
+            if character not in string.ascii_lowercase:
                 result += character
                 continue
 
