@@ -14,7 +14,7 @@ def main(arguments):
     cipher = generate_cipher(arguments[1])
 
     if cipher is None:
-        print("Invalid method. Available: as-one (text 1), as-two (text 2)")
+        print("Invalid method. Available: as-one (text 1), as-two (text 2), vg-three (text 3) & vg-four (text 4)")
         return
 
     print("Result:", cipher.decrypt(buffer))
