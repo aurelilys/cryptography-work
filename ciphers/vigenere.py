@@ -14,7 +14,6 @@ class Vigenere(Cipher):
         position = 0
 
         for character in buffer:
-            print(character)
             if character not in string.ascii_lowercase:
                 result += character
             else:
